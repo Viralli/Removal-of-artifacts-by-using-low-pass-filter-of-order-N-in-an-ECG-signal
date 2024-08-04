@@ -27,3 +27,19 @@ Utilized Kalman Filter and Kaiser Window Filter to improve detection of cardiac 
 6. Output for a plot between normalized frequency vs final ECG output at a sample freq of 20k samples per second - Phase
 
   <img width="324" alt="plot between normalized frequency vs final ECG output at a sample freq of 20k samples per second - Phase" src="https://github.com/user-attachments/assets/f277cda6-5f8e-47fd-a004-3d50221452e1">
+
+7. Output for a plot between normalized frequency vs final ECG output at a sample freq of 18k samples per second - Magnitude
+
+<img width="311" alt="plot between normalized frequency vs final ECG output at a sample freq of 18k samples per second - Magnitude" src="https://github.com/user-attachments/assets/0a2190f7-adf7-4a1b-b96d-f2083c998fcc">
+
+8. Output for a plot between normalized frequency vs final ECG output at a sample freq of 18k samples per second - Phase
+
+<img width="318" alt="plot between normalized frequency vs final ECG output at a sample freq of 18k samples per second - Phase" src="https://github.com/user-attachments/assets/b59a7c1f-717f-497d-859a-54514e9ea891">
+
+9. Output for a plot between normalized frequency vs final ECG output at a sample freq of 2k samples per second - Magnitude
+
+<img width="310" alt="plot between normalized frequency vs final ECG output at a sample freq of 2k samples per second - Magnitude" src="https://github.com/user-attachments/assets/60e25fd4-236a-4329-92bf-3f4bade12619">
+
+10. Output for a plot between normalized frequency vs final ECG output at a sample freq of 2k samples per second - Phase
+
+<img width="316" alt="plot between normalized frequency vs final ECG output at a sample freq of 2k samples per second - Phase" src="https://github.com/user-attachments/assets/cb349585-1158-4e6c-9b67-d8f8f4e8d11d">
