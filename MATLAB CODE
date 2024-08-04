@@ -1,31 +1,52 @@
 MATLAB CODE:
 
-Clc
+clc;
 close all;
-clear all;
-n=25;
-R=25;
-Wp=0.1;
-signal=0.025;
-[z,p,k]=cheby1(n,R,Wp);
-signal_nor = signal./max(signal);
-figure(1);
+clear;
+
+% Parameters
+n = 4; % Order of the filter
+Wp = 0.1; % Normalized passband frequency
+fs = 1000; % Sampling frequency (Hz)
+t = 0:1/fs:1-1/fs; % Time vector
+
+% Generate a sample signal (noisy sine wave)
+signal = sin(2*pi*50*t) + 0.5*randn(size(t)); % Example noisy signal
+
+% Normalize the signal
+signal_nor = (signal - min(signal)) / (max(signal) - min(signal));
+
+% Design a simple low-pass filter manually
+% For demonstration, we'll use a simple moving average filter as an alternative
+filter_order = 10; % Order of the moving average filter
+b = (1/filter_order) * ones(1, filter_order); % Filter coefficients for moving average
+a = 1; % Moving average filter has 'a' coefficient equal to 1
+
+% Apply the filter
+filtered_signal = filter(b, a, signal_nor);
+
+% Resampling parameters
+resampling_value = 100; % Example resampling factor
+sampling = resampling_value * fs / 1000;
+
+% Resample the filtered signal
+num_samples = length(filtered_signal);
+number0 = mod(num_samples, sampling);
+filtered_signal = filtered_signal(1:num_samples - number0); % Remove extra samples
+pog2 = reshape(filtered_signal, sampling, []); % Reshape for resampling
+energies = sum(pog2.^2, 1); % Compute energy of each segment
+
+% Plot results
+figure;
 subplot(2,1,1);
-title('kalman response');
-xlabel('normalised frequency');
-ylabel('kalman response for ecg signals');
-%elliptic filter design
-%Get the elliptic filter coefficients
-[b,a] = ellip(4,10,20,0.1);
-freqz(b,a);
-[kest,b,a]=kalman(b,a);
-dataIn = randn(1000.1);
-pog = filter(b,a,signal_nor);
-%resampled energy
-resampling_value=100;
-sampling=resampling_value*fs/1000;
-number:1-length(pog);
-number0=mod(length(pog),sampling);
-pog2*pog(1:number1-number2,1);
-samples=reshape(pog2,sampling,length(pog2))/(sampling);
-energies*(num(samples,'samples'));
+plot(t, signal, 'b', t, filtered_signal(1:length(t)), 'r');
+title('Signal and Filtered Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+legend('Original Signal', 'Filtered Signal');
+
+subplot(2,1,2);
+plot(energies);
+title('Energy of Resampled Segments');
+xlabel('Segment Number');
+ylabel('Energy');
