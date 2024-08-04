@@ -1,6 +1,12 @@
-Description of the Output
+Description of the Output:
 
-1. Amplitude vs. Time Plot
+1. Amplitude vs. Time Plot 
+
+    Amplitude vs. Time Plot: The output for this plot is detailed in the README section under the heading "MATLAB Output Part - 1." This plot illustrates the comparison 
+    
+    between the original noisy signal and the filtered signal over time, showcasing the effectiveness of the filtering process in smoothing out noise while preserving 
+
+    key signal features.
 
   What It Shows:
 
@@ -25,6 +31,10 @@ Purpose:
     filtered signal approximates the true underlying waveform.
 
 2. Energy vs. Segment Number Plot
+
+    Energy vs. Segment Number Plot: The output for this plot is presented in the README section under "MATLAB Output Part - 2." This plot provides a detailed view of the 
+
+    energy distribution across different segments of the filtered signal, offering valuable insights into the signal's dynamic range and activity levels.
 
 What It Shows:
 
