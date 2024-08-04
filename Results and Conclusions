@@ -1,0 +1,65 @@
+Results and Conclusions
+
+Here we present the results obtained by applying a Kalman filter to an ECG signal using MATLAB. The analysis involved plotting the normalized frequency response of the filtered ECG signal at various sampling frequencies. 
+
+The Kalman filter, implemented in MATLAB, was used to process the ECG data, resulting in the following observations:
+
+1. Sampling Frequency: 4 kHz
+
+The plot illustrates the normalized frequency versus the final ECG output. The output amplitude initially increases, then decreases, and stabilizes at approximately -20 dB. The phase response starts from zero degrees, 
+
+decreases, and then stabilizes at 0 degrees. - The respective plots for this point are shown in the Read.me file with the following names:
+
+-> Output for a plot between normalized frequency vs final ECG output at a sample freq of 4k samples per second - Magnitude
+
+-> Output for a plot between normalized frequency vs final ECG output at a sample freq of 4k samples per second - Phase
+
+2. Sampling Frequency: 12 kHz
+
+For this sample rate, the output amplitude shows a similar trend, increasing and then decreasing, eventually stabilizing around -20 dB. The phase response initially decreases, then increases and oscillates before settling 
+
+at approximately -750 degrees. - The respective plots for this point are shown in the Read.me file with the following names:
+
+-> Output for a plot between normalized frequency vs final ECG output at a sample freq of 12k samples per second - Magnitude
+
+-> Output for a plot between normalized frequency vs final ECG output at a sample freq of 12k samples per second - Phase
+
+3. Sampling Frequency: 20 kHz
+
+The output amplitude again follows the pattern of rising and then declining to around -20 dB. The phase response exhibits slight increases and decreases, ultimately stabilizing around 4000 degrees.
+
+The respective plots for this point are shown in the Read.me file with the following names:
+
+-> output for a plot between normalized frequency vs final ECG output at a sample freq of 20k samples per second - Magnitude
+
+-> Output for a plot between normalized frequency vs final ECG output at a sample freq of 20k samples per second - Phase
+
+4. Sampling Frequency: 18 kHz
+
+The amplitude response initially increases, decreases, and repeats this pattern, stabilizing at -20 dB. The phase response starts at 0 degrees, decreases, then increases, and finally settles at approximately -250 degrees.
+
+The respective plots for this point are shown in the Read.me file with the following names:
+
+->  Output for a plot between normalized frequency vs final ECG output at a sample freq of 18k samples per second - Magnitude
+
+-> Output for a plot between normalized frequency vs final ECG output at a sample freq of 18k samples per second - Phase
+
+5. Sampling Frequency: 2 kHz
+
+At this lower sampling rate, the amplitude response again shows the typical rise and fall, stabilizing at -20 dB. The phase response begins at 0 degrees, decreases, and then stabilizes at approximately 0 degrees.
+
+The respective plots for this point are shown in the Read.me file with the following names:
+
+-> Output for a plot between normalized frequency vs final ECG output at a sample freq of 2k samples per second - Magnitude
+
+-> Output for a plot between normalized frequency vs final ECG output at a sample freq of 2k samples per second - Phase
+
+Conclusion
+
+The results demonstrate the consistent behavior of the Kalman filter in processing ECG signals across various sampling frequencies. The amplitude response generally stabilizes at around -20 dB, indicating effective noise 
+
+reduction by the filter. The phase response shows variability depending on the sampling frequency, but each scenario ultimately reaches a stable state. These observations confirm the Kalman filter's efficiency in signal 
+
+processing applications, particularly in maintaining signal integrity while filtering out noise. The MATLAB simulations effectively illustrate these dynamics, providing valuable insights into the behavior of filtered 
+
+ECG signals under different conditions.
