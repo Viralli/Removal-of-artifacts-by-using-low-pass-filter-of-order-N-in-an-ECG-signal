@@ -1,0 +1,89 @@
+The Electrocardiogram (ECG)
+
+The Electrocardiogram (ECG) is a critical bio-electrical signal that cardiologists use to diagnose a variety of heart conditions and monitor the overall health of the cardiac system. ECG measures the electrical activity of 
+
+the heart by placing electrodes on the surface of the body, providing a graphical representation of the heart's rhythmic patterns. A typical adult heart rate ranges from 60 to 100 beats per minute (BPM). 
+
+An ECG test is a straightforward procedure used to assess the heart's rhythm and electrical activity. It involves sensors attached to the skin that detect electrical signals produced by the heart with each beat. These 
+
+signals are recorded and analyzed by a healthcare professional, often a cardiologist, to identify any abnormalities. ECGs can be performed in various healthcare settings, including hospitals, clinics, or a general 
+
+practitioner's office. Despite the similarity in names, an ECG is distinct from an echocardiogram, which is a different type of heart scan.
+
+When an ECG is Used
+
+ECGs are commonly employed in conjunction with other diagnostic tests to assess and monitor conditions affecting the heart. They are particularly useful in investigating symptoms such as chest pain, palpitations, dizziness,
+
+and shortness of breath. An ECG can help detect a range of cardiac issues, including:
+
+Arrhythmias: Irregular heartbeats that may be too slow, too fast, or erratic.
+Coronary Heart Disease: Blockages or interruptions in the heart's blood supply due to the accumulation of fatty deposits.
+Heart Attacks: Sudden blockages in the blood supply to the heart.
+Cardiomyopathy: Thickening or enlargement of the heart walls.
+
+Multiple ECGs may be performed over time to monitor patients with diagnosed heart conditions or those taking medications that could affect heart function.
+
+How an ECG is Carried Out
+
+There are several methods for conducting an ECG, typically involving the attachment of small, adhesive electrodes to the patient's arms, legs, and chest. These electrodes are connected by wires to an ECG machine, which 
+
+records the heart's electrical activity. The procedure is non-invasive, and no special preparation is required beforehand. Patients may be asked to remove upper clothing, and the chest area may need to be shaved or 
+
+cleaned to ensure proper electrode contact. The test usually takes only a few minutes, and patients can typically go home or return to their hospital ward immediately afterward.
+
+Types of ECG
+
+There are three primary types of ECGs:
+
+    Resting ECG: Conducted while the patient is lying down in a relaxed position.
+    Stress or Exercise ECG: Performed while the patient is on an exercise bike or treadmill to evaluate the heart's response to physical exertion.
+    Ambulatory ECG: Involves wearing a portable device at the waist to monitor the heart's activity over a day or more, useful for capturing irregular symptoms that occur sporadically.
+
+The choice of ECG type depends on the patient's symptoms and the suspected heart condition. For example, a stress ECG might be recommended if symptoms are exercise-induced, while an ambulatory ECG is better suited for 
+unpredictable symptoms.
+
+Getting Your Results
+
+ECG results are typically displayed as a graph, either electronically or on paper. For ambulatory ECGs, the data is stored electronically for later review by a healthcare professional. Results may not be immediately 
+
+available, as they often require interpretation by a specialist. Additional tests might be necessary to confirm a diagnosis, with follow-up appointments arranged to discuss the findings.
+
+Risks or Side Effects
+
+An ECG is a safe, quick, and painless test. While there is no electrical current passed into the body, slight discomfort may occur when electrodes are removed, akin to removing a sticking plaster. Rarely, a mild rash may 
+
+develop at the electrode sites. During a stress ECG, the test is carefully monitored, and it will be stopped if the patient feels unwell.
+
+Kalman Filter
+
+The Kalman Filter is a fundamental tool for estimating the state of dynamic systems from a series of noisy measurements, particularly effective in speech and signal processing. It helps resolve errors introduced by noise,
+
+such as in speech signals transmitted through a distorted channel. The Kalman Filter operates on linear dynamical systems discretized in the time domain, modeled as a Markov chain influenced by Gaussian noise. It requires
+
+specifying several matrices: the state-transition model, observation model, and the covariances of process and observation noise.
+
+The filter's utility extends to situations where state and observation models are highly non-linear, although the basic Kalman Filter assumes linearity. In cases of non-linearity, alternatives like the Extended Kalman 
+
+Filter (EKF) or the Unscented Kalman Filter (UKF) are used, with UKF leveraging the unscented transform for better handling non-linearities.
+
+Noise
+
+In the ECG and signal processing concepts, noise refers to unwanted disturbances that obscure the desired signal. It can originate from various sources, including environmental factors and electronic interference.
+
+Noise reduction is crucial in ensuring the accuracy and reliability of ECG signal interpretation.
+
+MATLAB
+
+MATLAB is a powerful computing environment used for high-performance numerical computation and visualization. It integrates various functionalities such as matrix computation, signal processing, and graphical 
+
+representation, making it an invaluable tool for analyzing digital signals, including ECG. This project utilizes MATLAB to filter ECG signals and extract meaningful features, aiding in the diagnosis of cardiac conditions.
+
+Project Idea
+
+The project focuses on filtering ECG signals from both healthy and unhealthy individuals and extracting key features from the resultant noise-free signals. By analyzing these features, abnormalities in the heart's 
+
+function can be identified. The ECG signal, consisting of the P wave, QRS complex, and T wave, provides crucial information about the heart's electrical activity. The project demonstrates the effectiveness of different 
+
+filtering techniques, with the Kaiser Window filter showing superior results in noise reduction. The filtered signals are analyzed to detect cardiac abnormalities, highlighting the significance of advanced signal 
+
+processing in medical diagnostics.
