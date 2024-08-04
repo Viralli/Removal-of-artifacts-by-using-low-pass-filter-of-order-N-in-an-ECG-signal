@@ -1,0 +1,31 @@
+MATLAB CODE:
+
+Clc
+close all;
+clear all;
+n=25;
+R=25;
+Wp=0.1;
+signal=0.025;
+[z,p,k]=cheby1(n,R,Wp);
+signal_nor = signal./max(signal);
+figure(1);
+subplot(2,1,1);
+title('kalman response');
+xlabel('normalised frequency');
+ylabel('kalman response for ecg signals');
+%elliptic filter design
+%Get the elliptic filter coefficients
+[b,a] = ellip(4,10,20,0.1);
+freqz(b,a);
+[kest,b,a]=kalman(b,a);
+dataIn = randn(1000.1);
+pog = filter(b,a,signal_nor);
+%resampled energy
+resampling_value=100;
+sampling=resampling_value*fs/1000;
+number:1-length(pog);
+number0=mod(length(pog),sampling);
+pog2*pog(1:number1-number2,1);
+samples=reshape(pog2,sampling,length(pog2))/(sampling);
+energies*(num(samples,'samples'));
