@@ -43,3 +43,11 @@ Utilized Kalman Filter and Kaiser Window Filter to improve detection of cardiac 
 10. Output for a plot between normalized frequency vs final ECG output at a sample freq of 2k samples per second - Phase
 
 <img width="316" alt="plot between normalized frequency vs final ECG output at a sample freq of 2k samples per second - Phase" src="https://github.com/user-attachments/assets/cb349585-1158-4e6c-9b67-d8f8f4e8d11d">
+
+11. MATLAB Output Part - 1
+
+<img width="958" alt="MATLAB CODE - OUTPUT PART 1" src="https://github.com/user-attachments/assets/b891f36d-638e-489d-923b-24efccb95c82">
+
+12. MATLAB Output Part - 2
+
+<img width="960" alt="MATLAB CODE - OUTPUT PART 2" src="https://github.com/user-attachments/assets/08df7267-c84b-432c-aadd-7347147d8ed2">
