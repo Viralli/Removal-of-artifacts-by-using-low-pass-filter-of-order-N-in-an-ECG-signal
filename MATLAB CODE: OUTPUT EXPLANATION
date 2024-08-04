@@ -1,0 +1,49 @@
+Description of the Output
+
+1. Amplitude vs. Time Plot
+
+  What It Shows:
+
+    The Amplitude vs. Time plot provides a comparative visualization of the original signal and the filtered signal over time. The original signal, depicted in blue, is a 
+
+     noisy sine wave that represents the raw data before any signal processing. In contrast, the filtered signal, shown in red, represents the data after applying a moving
+
+     average filter designed to smooth out the noise.
+
+Purpose:
+
+    The primary purpose of this plot is to illustrate the effect of the filtering process on the signal. The original signal, with its inherent noise, shows significant 
+
+    fluctuations in amplitude due to the random noise component. After filtering, the red curve demonstrates a smoother, less erratic signal, indicating that the filter has 
+
+    effectively reduced the noise while preserving the underlying waveform's main characteristics. This visualization is crucial for evaluating the performance of the filter 
+
+    and ensuring that the noise reduction does not distort the original signal's important features.
+
+    By comparing the amplitude of the original and filtered signals, users can assess how well the filtering process has improved the signal's clarity and how closely the 
+
+    filtered signal approximates the true underlying waveform.
+
+2. Energy vs. Segment Number Plot
+
+What It Shows:
+
+    The Energy vs. Segment Number plot displays the computed energy of each segment of the filtered signal after resampling. This plot provides a detailed view of how the
+
+    energy is distributed across different segments of the signal. Each segment's energy is calculated as the sum of the squared amplitude values within that segment.
+
+Purpose:
+
+    The plot serves to offer insights into the energy distribution of the filtered signal. Higher energy values indicate segments with more significant signal content, 
+
+    which might correspond to periods of increased activity or notable features within the signal. Conversely, lower energy values suggest less active or quieter segments.
+
+    Understanding the energy distribution is essential for applications where the signal's dynamic range and variations are critical. This analysis can help in identifying
+
+    patterns or anomalies in the signal, which might be crucial for further processing or interpretation. For instance, in biomedical signal analysis, such as ECG, varying 
+
+    energy levels could correspond to different cardiac events or conditions, making this plot a valuable tool for signal assessment and diagnostic evaluation.
+
+    Overall, these plots provide a comprehensive view of the signal's behavior before and after filtering, as well as insights into its energy characteristics, thereby 
+
+    supporting effective signal analysis and processing.
