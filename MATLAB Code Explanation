@@ -1,0 +1,147 @@
+MATLAB Code:
+
+clc;
+close all;
+clear;
+
+% Parameters
+n = 4; % Order of the filter
+Wp = 0.1; % Normalized passband frequency
+fs = 1000; % Sampling frequency (Hz)
+t = 0:1/fs:1-1/fs; % Time vector
+
+% Generate a sample signal (noisy sine wave)
+signal = sin(2*pi*50*t) + 0.5*randn(size(t)); % Example noisy signal
+
+% Normalize the signal
+signal_nor = (signal - min(signal)) / (max(signal) - min(signal));
+
+% Design a simple low-pass filter manually
+% For demonstration, we'll use a simple moving average filter as an alternative
+filter_order = 10; % Order of the moving average filter
+b = (1/filter_order) * ones(1, filter_order); % Filter coefficients for moving average
+a = 1; % Moving average filter has 'a' coefficient equal to 1
+
+% Apply the filter
+filtered_signal = filter(b, a, signal_nor);
+
+% Resampling parameters
+resampling_value = 100; % Example resampling factor
+sampling = resampling_value * fs / 1000;
+
+% Resample the filtered signal
+num_samples = length(filtered_signal);
+number0 = mod(num_samples, sampling);
+filtered_signal = filtered_signal(1:num_samples - number0); % Remove extra samples
+pog2 = reshape(filtered_signal, sampling, []); % Reshape for resampling
+energies = sum(pog2.^2, 1); % Compute energy of each segment
+
+% Plot results
+figure;
+subplot(2,1,1);
+plot(t, signal, 'b', t, filtered_signal(1:length(t)), 'r');
+title('Signal and Filtered Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+legend('Original Signal', 'Filtered Signal');
+
+subplot(2,1,2);
+plot(energies);
+title('Energy of Resampled Segments');
+xlabel('Segment Number');
+ylabel('Energy');
+
+MATLAB Code Explanation:
+
+This MATLAB script demonstrates how to generate a noisy sine wave signal, normalize it, apply a low-pass filter, and then perform resampling to analyze the energy of the
+
+filtered signal. Below is a step-by-step explanation of the code:
+
+1. Initialization
+
+clc;
+close all;
+clear;
+
+    `clc`: Clears the command window.
+    `close all`: Closes all figure windows.
+    `clear`: Removes all variables from the workspace.
+
+2. Parameters
+
+n = 4; % Order of the filter
+Wp = 0.1; % Normalized passband frequency
+fs = 1000; % Sampling frequency (Hz)
+t = 0:1/fs:1-1/fs; % Time vector
+
+    `n`: Order of the filter (not used in this example).
+    `Wp`: Normalized passband frequency (not used in this example).
+    `fs`: Sampling frequency of 1000 Hz.
+    `t`: Time vector from 0 to 1 second with intervals of 1/fs seconds.
+
+3. Signal Generation
+
+    signal = sin(2*pi*50*t) + 0.5*randn(size(t)); % Example noisy signal
+
+    Generates a noisy sine wave signal with a frequency of 50 Hz and adds Gaussian noise.
+
+4. Normalization
+
+    signal_nor = (signal - min(signal)) / (max(signal) - min(signal));
+
+    Normalizes the signal to the range [0, 1] by subtracting the minimum value and dividing by the range (maximum - minimum).
+
+5. Filter Design
+
+filter_order = 10; % Order of the moving average filter
+b = (1/filter_order) * ones(1, filter_order); % Filter coefficients for moving average
+a = 1; % Moving average filter has 'a' coefficient equal to 1
+
+    Designs a simple moving average filter with a specified order. The filter coefficients `b` are equal and sum to 1, and the filter `a` coefficient is 1.
+
+6. Filtering
+
+filtered_signal = filter(b, a, signal_nor);
+
+    Applies the moving average filter to the normalized signal.
+
+7. Resampling Parameters
+
+resampling_value = 100; % Example resampling factor
+sampling = resampling_value * fs / 1000;
+
+    Defines a resampling factor of 100 and calculates the new sampling frequency based on the original sampling frequency.
+
+8. Resampling
+
+num_samples = length(filtered_signal);
+number0 = mod(num_samples, sampling);
+filtered_signal = filtered_signal(1:num_samples - number0); % Remove extra samples
+pog2 = reshape(filtered_signal, sampling, []); % Reshape for resampling
+energies = sum(pog2.^2, 1); % Compute energy of each segment
+
+    Adjusts the length of the filtered signal to be a multiple of the resampling factor.
+
+    Reshapes the filtered signal into segments based on the resampling factor and computes the energy of each segment by summing the squared values.
+
+9. Plotting Results
+
+figure;
+subplot(2,1,1);
+plot(t, signal, 'b', t, filtered_signal(1:length(t)), 'r');
+title('Signal and Filtered Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+legend('Original Signal', 'Filtered Signal');
+
+subplot(2,1,2);
+plot(energies);
+title('Energy of Resampled Segments');
+xlabel('Segment Number');
+ylabel('Energy');
+
+    First subplot: Plots the original noisy signal and the filtered signal over time.
+
+    Second subplot: Plots the energy of each resampled segment, showing how the energy varies across segments.
+
+This code is useful for analyzing signal processing techniques, including filtering and resampling, and understanding the energy distribution of a processed signal. It demonstrates basic signal manipulation and visualization techniques in MATLAB.
