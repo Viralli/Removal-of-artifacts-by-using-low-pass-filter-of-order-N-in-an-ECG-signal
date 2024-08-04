@@ -1,0 +1,63 @@
+Noise: An Overview
+
+     Noise is generally defined as unwanted sound that is unpleasant, loud, or disruptive to hearing. From a physics perspective, noise is indistinguishable from sound, as both are vibrations through a medium, such as 
+
+     air or water. The differentiation occurs in the brain's reception and perception of these vibrations. In experimental sciences, noise often refers to random fluctuations of data that obscure the detection of an 
+
+     expected signal.
+
+    Acoustic Noise: This includes any sound within the acoustic domain, whether intentional (such as music or speech) or unintended. In contrast, electronic noise may not be audible to humans and often requires 
+
+    instruments for detection. In audio engineering, noise refers to the unwanted residual electronic noise signal that results in acoustic noise, often perceived as a hiss.
+
+Measurement of Sound
+
+    Sound is measured based on the amplitude and frequency of a sound wave. Amplitude measures the forcefulness of the wave, with the energy of a sound wave quantified in decibels (dB), which describe the loudness or 
+
+    intensity of a sound. Decibels are expressed on a logarithmic scale. Pitch, which describes the frequency of a sound, is measured in hertz (Hz). A-weighting is applied to a sound spectrum to represent what humans 
+
+    can hear at various frequencies, with sound pressure expressed in terms of dBA. For reference, 0 dBA is the softest level a person can hear, normal speaking voices are around 65 dBA, and a rock concert can reach 
+
+    about 120 dBA.
+
+White Noise
+
+    In signal processing, white noise is a random signal with equal intensity at different frequencies, resulting in a constant power spectral density. This concept is used across various scientific and technical fields,
+
+    including physics, acoustic engineering, telecommunications, and statistical forecasting. White noise is more of a statistical model for signals rather than a specific signal.
+
+    In discrete time, white noise is a sequence of serially uncorrelated random variables with zero mean and finite variance. If the samples have a normal distribution with zero mean, the signal is termed Gaussian white 
+
+    noise. The samples can be arranged in time or along spatial dimensions, such as in digital image processing where pixels are independent random variables with uniform probability distribution. An infinite-bandwidth 
+
+    white noise signal is theoretical, as practical limitations arise from the noise generation mechanism, transmission medium, and observation capabilities. Thus, a signal is considered "white noise" if it exhibits a 
+
+    flat spectrum over relevant frequencies, such as the audible range of 20 to 20,000 Hz, which sounds like a hissing noise. In music and acoustics, any signal with a similar hissing sound may be termed white noise.
+
+Environmental Noise
+
+    Environmental noise encompasses noise pollution from transportation, industrial, and recreational activities. Described as 'unwanted sound,' it is generally present in all areas of human activity. Its effects on 
+
+    humans can be emotional, physiological, and psychological, including interference with speech, annoyance, sleep disturbance, anxiety, hearing damage, and stress-related cardiovascular issues. Environmental noise is 
+
+    regulated and monitored by many governments and institutions, creating various occupations focused on accurate noise measurement. Noise is measured in decibels (dB) using sound level meters, typically over weeks 
+
+    and under different weather conditions.
+
+White Gaussian Noise
+
+    Additive White Gaussian Noise (AWGN) is a fundamental noise model in Information Theory, used to simulate random processes in nature. The term has specific modifiers:
+
+        Additive: It is added to any intrinsic noise within the information system.
+        White: It has uniform power across the frequency band of the information system, analogous to white light.
+        Gaussian: It has a normal distribution in the time domain with a zero mean.
+
+    Wideband noise originates from natural sources like thermal vibrations in conductors (thermal noise or Johnson-Nyquist noise), shot noise, black body radiation, and celestial sources like the Sun. According to the
+
+    central limit theorem, the summation of many random processes will tend to have a Gaussian or Normal distribution.
+
+    AWGN is used as a channel model where the primary impairment is the linear addition of white noise with constant spectral density and Gaussian amplitude distribution. It simplifies the mathematical models, providing 
+
+    insights into system behavior before considering other phenomena like fading, frequency selectivity, interference, nonlinearity, or dispersion. The AWGN model is suitable for satellite and deep space communication 
+
+    links but less so for terrestrial links due to multipath, terrain blocking, and interference. In terrestrial path modeling, AWGN simulates background noise along with other factors like multipath and interference.
