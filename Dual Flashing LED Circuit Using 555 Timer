@@ -1,0 +1,5 @@
+Project Overview
+
+    This project involved designing and implementing a dual flashing LED circuit using a 555 Timer IC. The circuit was designed to achieve alternating blinking of two LEDs through a continuous square wave signal generated 
+
+    by the 555 Timer. The project spanned from May 2017 to July 2017 and included transitioning from initial breadboard testing to final Printed Circuit Board (PCB) assembly.
