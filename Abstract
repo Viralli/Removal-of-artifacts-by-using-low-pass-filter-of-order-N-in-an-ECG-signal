@@ -1,0 +1,19 @@
+Abstract
+
+This project focuses on enhancing the quality of Electrocardiogram (ECG) signals to better distinguish between healthy and unhealthy heart conditions through advanced filtering techniques. ECG signals are crucial for 
+
+diagnosing various cardiac disorders, providing a graphical representation of the heart's electrical activity. The project employs both Kalman and Kaiser Window filters to improve the detection of cardiac abnormalities by
+
+implementing effective noise reduction techniques using MATLAB software.The project is structured into two main phases: filtering and feature extraction. In the filtering phase, both the Kalman Filter and Kaiser Window 
+
+low-pass filter are applied to the ECG signals to remove artifacts and noise. A comparative analysis is conducted to evaluate the effectiveness of these filters in producing cleaner, more accurate ECG signals.The cleaned 
+
+signals are then subjected to feature extraction, which involves analyzing the key components of the ECG waveform: the P wave, QRS complex, and T wave. These components correspond to different phases of the cardiac cycle, 
+
+such as atrial activation and ventricular depolarization. The project also utilizes wavelet transform techniques to further refine the signal, with the Kaiser Window filter demonstrating superior performance in preserving 
+
+essential features while minimizing noise.The filtered signals are sourced from an ECG database that includes both normal and abnormal waveforms. This comprehensive analysis highlights the importance of noise reduction in 
+
+ECG signal processing and provides valuable insights into the heart's electrical performance, aiding in the accurate detection of cardiac abnormalities. The comparative evaluation of the Kalman and Kaiser Window filters
+
+underscores the effectiveness of these techniques in improving ECG signal quality and diagnostic accuracy.
