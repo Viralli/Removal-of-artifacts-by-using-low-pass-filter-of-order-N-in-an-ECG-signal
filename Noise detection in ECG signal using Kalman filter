@@ -1,0 +1,81 @@
+Overview
+
+    Electrocardiogram (ECG) analysis is crucial for diagnosing various cardiac conditions. The ECG signal, a graphical representation of the heart's electrical activity, comprises three main components: the P wave, QRS 
+
+    complex, and T wave. These elements correspond to the atrial and ventricular depolarizations and repolarizations. The normal heart rate for adults ranges from 60 to 100 beats per minute (BPM). By analyzing the ECG, 
+
+    healthcare professionals can assess heart rate, rhythm, and the presence of abnormalities such as arrhythmias, heart muscle conditions, and the effects of previous heart attacks.
+
+Application of ECG
+
+    The ECG provides invaluable information, including:
+
+        Heart Rate and Rhythm: Assessing the pattern and speed of heartbeats.
+
+        Condition of Heart Muscle: Identifying potential disorders and structural abnormalities.
+
+        Detection of Arrhythmias: Identifying irregular heart rhythms.
+
+        Diagnosis of Heart Damage: Determining the extent and location of heart injuries, such as those caused by high blood pressure, rheumatic fever, or congenital defects.
+
+Noise Generation and Filtering
+
+    In ECG signal processing, "noise" refers to unwanted variations that obscure the true signal. Common noise sources include baseline wander, muscle artifacts, and power line interference. For this project, noise is
+
+    generated in MATLAB, incorporating various types such as white noise, colored noise (flicker, Brownian, blue, and purple), and baseline wander noise (BW). BW, primarily caused by patient movement and respiration, 
+
+     presents as low-frequency artifacts that complicate ECG interpretation.
+
+    To address this, we implemented an Extended Kalman Filter (EKF), a powerful tool for filtering noisy signals. The EKF's adaptive capabilities allow it to maintain the integrity of the ECG signal even in the presence 
+
+    of significant noise, making it suitable for applications like fetal cardiac signal extraction from maternal abdominal recordings.
+
+Kalman Filter Algorithm
+
+    The Kalman filter operates by recursively estimating the internal state of a system using a series of noisy observations. The process involves:
+
+         Prediction: Estimating the current state based on the previous state and known system dynamics.
+
+         Update: Refining the prediction by incorporating new measurements.
+
+    Key components of the Kalman filter include:
+
+         State Transition Model (Fk): Predicts the next state from the current state.
+
+         Observation Model (Hk): Relates the current state to the measurements.
+
+         Process Noise Covariance (Qk): Represents the uncertainty in the model.
+
+         Observation Noise Covariance (Rk): Accounts for measurement noise.
+
+The algorithm assumes the state at time k evolves from the state at k−1 according to the model:
+
+                                     xk​=Fk​xk−1​+Bk​uk​+wk​
+
+where Bk is the control-input model, uk is the control vector, and wk represents the process noise. 
+
+The measurement at time k is:
+
+                                      zk​=Hk​xk​+vk​
+
+where vk is the observation noise.
+
+Kalman Gain
+
+    The Kalman gain, K, is a critical factor determining the weight given to new measurements versus the model's prediction. It adjusts based on the accuracy of previous estimates:
+
+          Low Gain: More trust in the prediction, less in the new measurement.
+
+          High Gain: More trust in the new measurement, less in the prediction.
+
+The formula for the updated state estimate is:
+
+                             xn+1​=xn+1∣n​+K(yn+1​−Hxn+1∣n​)
+
+where xn+1∣n​ is the predicted state, yn+1 is the new measurement, and H is the observation model.
+
+Conclusion
+
+The Kalman filter's recursive nature and ability to process real-time data make it ideal for ECG signal filtering. This project demonstrated its effectiveness in denoising ECG signals, preserving essential features for
+
+accurate cardiac assessment. The EKF's adaptive parameter selection and robust performance across various ECG conditions highlight its potential for broader biomedical applications, including noninvasive fetal monitoring.
