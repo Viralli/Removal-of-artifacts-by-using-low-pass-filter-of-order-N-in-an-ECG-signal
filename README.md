@@ -4,6 +4,8 @@
 
 Utilized Kalman Filter and Kaiser Window Filter to improve detection of cardiac abnormalities by implementing noise reduction techniques on Electrocardiogram (ECG) signals using MATLAB Software. Conducted comparative analysis to evaluate their effectiveness.
 
+# Outputs
+
 1. Output for a plot between normalized frequency vs final ECG output at a sample freq of 4k samples per second - Magnitude
 
    <img width="308" alt="a plot between normalized frequency vs final ECG output at a sample freq of 4k samples per second - Magnitude" src="https://github.com/user-attachments/assets/27b10f6b-7b94-4433-872a-136fa118f5cc">
